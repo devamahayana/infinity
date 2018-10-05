@@ -33,6 +33,7 @@
 					<li><a id="submenu1" onclick="opensubmenu1()">Admin</a>
 						<ul id="list1" class="closesub">
 							<li><a class="urlmenu" href="admin/user/index.php">User</a></li>
+							<li><a class="urlmenu" href="admin/matpel/index.php">Mata Pelajaran</a></li>
 						</ul>
 					</li>
 					<li><a id="submenu2" onclick="opensubmenu2()">Guru</a>
