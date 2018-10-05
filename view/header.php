@@ -2,15 +2,20 @@
 	require_once 'core/init.php';
 	if (!isset($_SESSION['username'])) {
 		echo "<script>
+		alert('anda belum login !');
 			location.href = 'index.php';
+
 		</script>";
 	}
+	/*$username = $_SESSION['username'];
+	$query = "SELECT * FROM tb_login WHERE username = '$username'";
+	$hasil = */
  ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sekolahku <?php echo $_SESSION['username']; ?> </title>
-	<link rel="stylesheet" type="text/css" href="css/admin.css">
+	<title>Sekolahku </title>
+	<link rel="stylesheet" type="text/css" href="css/admin.css?v=2.0">
 	<link rel="stylesheet" type="text/css" href="fontawesome/css/fontawesome.min.css">
 	<link rel="stylesheet" type="text/css" href="fontawesome/css/solid.css">
 	<link rel="stylesheet" type="text/css" href="fontawesome/css/regular.css">
@@ -35,11 +40,9 @@
 							<li><a class="urlmenu" href="guru/semuaguru/index.php">Semua Guru</a></li>
 						</ul>
 					</li>
-					<li><a id="submenu3" onclick="opensubmenu3()">Murid</a>
+					<li><a id="submenu3" onclick="opensubmenu3()">Siswa</a>
 						<ul id="list3" class="closesub">
-							<li><a href="#">test</a></li>
-							<li><a href="#">test</a></li>
-							<li><a href="#">test</a></li>
+							<li><a class="urlmenu" href="siswa/semuasiswa/index.php">Semua siswa</a></li>
 						</ul>
 					</li>
 				</ul>

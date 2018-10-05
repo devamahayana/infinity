@@ -22,13 +22,12 @@
 		<div class="container-login">
 			<div class="form-login">
 				<div class="content-login">
-					<h2>Hi guys !</h2>
-					<p>Login dahulu untuk menggunakan website ini</p>
 					<img src="images/images2.jpg">
-					
 				</div>
 				<div id="order" class="content-login">
-					
+					<h2>Hi guys !</h2>
+					<p>Login dahulu untuk menggunakan website ini
+					</p>
 					<div class="login">
 						<form action="index.php" method="post">
 							<br>	
@@ -64,7 +63,7 @@
 			$hasil = mysqli_query($link , $query);
 			if (mysqli_num_rows($hasil) == 1) {
 				$data = mysqli_fetch_assoc($hasil);
-				if ($data['level'] == "admin") {
+				if ($data['level'] == "Admin") {
 					$_SESSION['username'] = $data['username'];
 					echo "
 						<script>
@@ -72,14 +71,14 @@
 							location.href = 'admin.php';
 						</script>
 					";
-				}elseif ($data['level'] == "guru") {
+				}elseif ($data['level'] == "Guru") {
 					$_SESSION['username'] = $data['username'];
 					echo "
 						<script>
 							alert('Guru berhasil Login');
 						</script>
 					";
-				}elseif ($data['level'] == "siswa") {
+				}elseif ($data['level'] == "Siswa") {
 					$_SESSION['username'] = $data['username'];
 					echo "
 						<script>
