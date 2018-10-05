@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 04 Okt 2018 pada 09.00
+-- Waktu pembuatan: 05 Okt 2018 pada 19.17
 -- Versi server: 10.1.34-MariaDB
 -- Versi PHP: 5.6.37
 
@@ -43,6 +43,27 @@ CREATE TABLE `tb_guru` (
   `foto_guru` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data untuk tabel `tb_guru`
+--
+
+INSERT INTO `tb_guru` (`kode_guru`, `kode_login`, `nik`, `nama_guru`, `alamat_guru`, `jk_guru`, `tempatlahir_guru`, `tgllahir_guru`, `agama_guru`, `notelp_guru`, `email_guru`, `foto_guru`) VALUES
+(5, 35, 'Belum diisi', 'Belum diisi', 'Belum diisi', 'Belum diisi', 'Belum diisi', 'Belum diisi', 'Belum diisi', 'Belum diisi', 'Belum Diisi', 'Belum Diisi'),
+(6, 36, 'Belum diisi', 'Belum diisi', 'Belum diisi', 'Belum diisi', 'Belum diisi', 'Belum diisi', 'Belum diisi', 'Belum diisi', 'Belum Diisi', 'Belum Diisi');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_kelas`
+--
+
+CREATE TABLE `tb_kelas` (
+  `kode_kelas` int(11) NOT NULL,
+  `nama_kelas` varchar(25) NOT NULL,
+  `tingkat_kelas` varchar(25) NOT NULL,
+  `ruangan_kelas` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 -- --------------------------------------------------------
 
 --
@@ -61,8 +82,29 @@ CREATE TABLE `tb_login` (
 --
 
 INSERT INTO `tb_login` (`kode_login`, `username`, `password`, `level`) VALUES
-(1, 'admin01', '123', 'admin'),
-(2, 'admin02', '123', 'admin');
+(1, 'admin', '123', 'Admin'),
+(34, 'siswa_yoga', '123', 'Siswa'),
+(35, 'guru_yoga', '123', 'Guru'),
+(36, 'test', '123', 'Guru');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_matpel`
+--
+
+CREATE TABLE `tb_matpel` (
+  `kode_matpel` int(11) NOT NULL,
+  `nama_matpel` varchar(50) NOT NULL,
+  `jumlah_jam` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `tb_matpel`
+--
+
+INSERT INTO `tb_matpel` (`kode_matpel`, `nama_matpel`, `jumlah_jam`) VALUES
+(1, 'Sejarah Indonesia', 5);
 
 -- --------------------------------------------------------
 
@@ -72,13 +114,26 @@ INSERT INTO `tb_login` (`kode_login`, `username`, `password`, `level`) VALUES
 
 CREATE TABLE `tb_siswa` (
   `kode_siswa` int(11) NOT NULL,
+  `kode_login` int(11) NOT NULL,
+  `nis` varchar(10) NOT NULL,
   `nama_siswa` varchar(50) NOT NULL,
+  `agama_siswa` varchar(20) NOT NULL,
   `alamat_siswa` varchar(100) NOT NULL,
   `jk_siswa` varchar(10) NOT NULL,
   `kelas_siswa` varchar(10) NOT NULL,
+  `tempatlahir_siswa` varchar(25) NOT NULL,
+  `tgllahir_siswa` varchar(25) NOT NULL,
   `nama_ayah` varchar(50) NOT NULL,
-  `notelp_ortu` varchar(15) NOT NULL
+  `notelp_ortu` varchar(15) NOT NULL,
+  `img_siswa` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `tb_siswa`
+--
+
+INSERT INTO `tb_siswa` (`kode_siswa`, `kode_login`, `nis`, `nama_siswa`, `agama_siswa`, `alamat_siswa`, `jk_siswa`, `kelas_siswa`, `tempatlahir_siswa`, `tgllahir_siswa`, `nama_ayah`, `notelp_ortu`, `img_siswa`) VALUES
+(3, 34, 'Belum diis', 'Belum diisi', 'Belum diisi', 'Belum diisi', 'Belum diis', 'Belum diis', 'Belum diisi', 'Belum diisi', 'Belum diisi', 'Belum diisi', 'Belum diisi');
 
 --
 -- Indexes for dumped tables
@@ -89,7 +144,13 @@ CREATE TABLE `tb_siswa` (
 --
 ALTER TABLE `tb_guru`
   ADD PRIMARY KEY (`kode_guru`),
-  ADD KEY `kode_login` (`kode_login`);
+  ADD KEY `tb_guru_ibfk_1` (`kode_login`);
+
+--
+-- Indeks untuk tabel `tb_kelas`
+--
+ALTER TABLE `tb_kelas`
+  ADD PRIMARY KEY (`kode_kelas`);
 
 --
 -- Indeks untuk tabel `tb_login`
@@ -98,10 +159,17 @@ ALTER TABLE `tb_login`
   ADD PRIMARY KEY (`kode_login`);
 
 --
+-- Indeks untuk tabel `tb_matpel`
+--
+ALTER TABLE `tb_matpel`
+  ADD PRIMARY KEY (`kode_matpel`);
+
+--
 -- Indeks untuk tabel `tb_siswa`
 --
 ALTER TABLE `tb_siswa`
-  ADD PRIMARY KEY (`kode_siswa`);
+  ADD PRIMARY KEY (`kode_siswa`),
+  ADD KEY `tb_siswa_ibfk_1` (`kode_login`);
 
 --
 -- AUTO_INCREMENT untuk tabel yang dibuang
@@ -111,19 +179,31 @@ ALTER TABLE `tb_siswa`
 -- AUTO_INCREMENT untuk tabel `tb_guru`
 --
 ALTER TABLE `tb_guru`
-  MODIFY `kode_guru` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `kode_guru` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT untuk tabel `tb_kelas`
+--
+ALTER TABLE `tb_kelas`
+  MODIFY `kode_kelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_login`
 --
 ALTER TABLE `tb_login`
-  MODIFY `kode_login` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `kode_login` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+
+--
+-- AUTO_INCREMENT untuk tabel `tb_matpel`
+--
+ALTER TABLE `tb_matpel`
+  MODIFY `kode_matpel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_siswa`
 --
 ALTER TABLE `tb_siswa`
-  MODIFY `kode_siswa` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `kode_siswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
@@ -133,7 +213,13 @@ ALTER TABLE `tb_siswa`
 -- Ketidakleluasaan untuk tabel `tb_guru`
 --
 ALTER TABLE `tb_guru`
-  ADD CONSTRAINT `tb_guru_ibfk_1` FOREIGN KEY (`kode_login`) REFERENCES `tb_login` (`kode_login`);
+  ADD CONSTRAINT `tb_guru_ibfk_1` FOREIGN KEY (`kode_login`) REFERENCES `tb_login` (`kode_login`) ON DELETE CASCADE;
+
+--
+-- Ketidakleluasaan untuk tabel `tb_siswa`
+--
+ALTER TABLE `tb_siswa`
+  ADD CONSTRAINT `tb_siswa_ibfk_1` FOREIGN KEY (`kode_login`) REFERENCES `tb_login` (`kode_login`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
