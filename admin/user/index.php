@@ -9,9 +9,7 @@
 					<h2>Data user </h2>
 					<p id="tanggal"></p>
 				</div>
-				<div class="search">
-					<input type="text" name="seacrh" placeholder="Search....">
-				</div>
+				
 				<div class="form">
 					<table cellpadding="10px"> 
 						<tr class="judul-form">

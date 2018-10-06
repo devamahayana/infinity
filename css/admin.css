@@ -12,7 +12,7 @@ body{
 	position: fixed;
 	width: 20%;
 	height: 100vh;
-	background: #fff;
+	background: linear-gradient(-45deg,#67b26f,#4ca2cd);;
 	transition: 1s;
 	margin-left: 0px;
 	z-index: 1;
@@ -29,13 +29,14 @@ body{
 	margin-right: 60px;
 	font-weight: 300;
 	margin-left: 20px;
+	color: #fff;
 }
 
 .section-atas i{
 	float: left;
 	margin-top: 25px;
 	margin-left: 20px;
-
+	color: #fff;
 }
 
 .img{
@@ -50,7 +51,7 @@ body{
 	box-shadow: 0px 2px 4px rgba(0,0,0,.5);
 }
 .profil{
-	color: #000;
+	color: #fff;
 	font-family: arial;
 	text-decoration: none;
 	font-size: 1.5em;
@@ -75,7 +76,7 @@ body{
 .container-sidemenu nav ul li a{
 	display: inline-block;
 	text-decoration: none;
-	color: #000;
+	color: #fff;
 	font-family: arial;
 	width: 80%;
 	height: 35px;
@@ -117,10 +118,11 @@ body{
 	background-color: #000;
 	border-radius: 50%;
 	text-align: center;
-	padding: 10px 15px;
 	z-index: 100;
 	margin-top: 80px;
 	position: fixed;
+	width: 50px;
+	height: 50px;
 }
 .container-menu nav{
 	float: right;
@@ -133,6 +135,54 @@ body{
 	padding-right: 10px;
 	cursor: pointer;
 }
+
+.section-kiri{
+	margin-left: 300px;
+	float: left;
+}
+
+.section-kiri i{
+	margin: 22px 10px;
+	position: absolute;
+}
+
+.section-kiri input{
+	border-radius: 30px;
+	width: 350px;
+	margin-top:12px;
+	outline: none;
+	border: none;
+	padding: 10px;
+	padding-left: 30px;
+	font-family: arial;
+	font-weight: bold;
+}
+
+.section-kanan{
+	float: right;
+}
+
+.section-kanan p{
+	float: left;
+	line-height: 30px;
+	color: #fff;
+}
+
+.section-kanan i{
+	float: left;
+	line-height: 60px;
+	color: #fff;
+	margin: 0px 10px;
+}
+
+.section-kanan img{
+	border-radius: 50%;
+	margin-top: 10px;
+	margin-right: 5px;
+	float: left;
+
+}
+
 .container-data{
 	width: 100%;
 	min-height: 100vh;
@@ -285,9 +335,8 @@ body{
 }
 .logout{
 	text-decoration: none;
-	color: #4286f4;
+	color: #fff;
 	padding: 5px 15px;
-	background-color: white;
 	font-family: arial;
 	font-size: 0.8em;
 }

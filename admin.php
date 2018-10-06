@@ -2,13 +2,11 @@
 		<div class="container-data">
 			<div class="wrap-data">
 				<div class="judul">
-					<h2>Ini Judul</h2>
+					<h2>Dashboard</h2>
 					<p id="tanggal"></p>
 				</div>
-				<div class="search">
-					<input type="text" name="seacrh" placeholder="Search....">
-				</div>
-				<div class="form">
+				
+				<!-- <div class="form">
 					<table cellpadding="10px"> 
 						<tr class="judul-form">
 							<th width="50px">No</th>
@@ -38,7 +36,7 @@
 							<td colspan="4"><a class="btn-tambah" href="#">Tambah</a></td>
 						</tr>
 					</table>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	<?php require_once 'view/footer.php'; ?>
