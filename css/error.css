@@ -1,0 +1,95 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.wreaper{
+	width: 100%;
+	max-width: 1366px;
+	height: 100vh;
+	background-color: rgba(0,0,0,.2);
+	display: flex;
+	padding: 0px;
+}
+
+.error{
+	width: 400px;
+	height: 300px;
+	background-color: #fff;
+	margin: auto;
+	align-items: center;
+	align-content: center;
+	border-radius: 30px;
+}
+
+.error p{
+	text-align: center;
+	font-size: 3rem;
+	font-family: arial;
+	color: #ff7c81;
+	animation: .7s animate ease-in forwards;
+	opacity: 0;
+	margin-top: 50px;
+}
+
+.error img{
+	margin-left: 75px;
+}
+
+.garis-kiri{
+	width: 100px;
+	height: 10px;
+	background-color: #ff7c81;
+	border-radius: 10px;
+	transform: rotate(45deg);
+	margin: auto;
+	opacity: 0;
+	animation: .7s kiri ease-in forwards;
+	margin-top: -130px;
+
+}
+
+.garis-kanan{
+	width: 100px;
+	height: 10px;
+	background-color: #ff7c81;
+	border-radius: 10px;
+	transform: rotate(-45deg);
+	margin: auto;
+	opacity: 0;
+	animation: .7s kanan ease-in forwards;
+	margin-top: -10px;
+}
+
+@keyframes animate{
+	form{
+		margin-top: 70px;
+		opacity: 0;
+	}
+	to{
+		margin-top: 90px;
+		opacity: 1;
+	}
+}
+
+@keyframes kiri{
+	form{
+		margin-top: -150px;
+		opacity: 0;
+	}
+	to{
+		margin-top: -130px;
+		opacity: 1;
+	}
+}
+
+@keyframes kanan{
+	form{
+		margin-top: -30px;
+		opacity: 0;
+	}
+	to{
+		margin-top: -10px;
+		opacity: 1;
+	}
+}
