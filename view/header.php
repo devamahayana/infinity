@@ -25,6 +25,9 @@
 <body>
 	<div class="wrapper">
 		<div class="container-sidemenu">
+			<button id="btn" onclick="closemenu()">
+				<i class="fas fa-angle-left"></i>
+			</button>
 			<div class="section-atas">
 				<h2>E-<b>School</b></h2>
 				<i class="fas fa-home"></i>
@@ -60,9 +63,6 @@
 			</nav>
 		</div>
 		<div class="container-menu">
-			<button id="btn" onclick="openmenu()">
-				<i class="fas fa-bars"></i>
-			</button>
 			<nav>
 				<i class="fas fa-user"></i>
 				<i class="far fa-calendar-alt"></i>

@@ -14,7 +14,7 @@
 		function openmenu() {
 			btn.setAttribute('onclick','closemenu()');
 			sidemenu.style.marginLeft = '0px';
-			logo.className = "fas fa-times";
+			logo.className = "fas fa-angle-left";
 			data.style.width = '70%';
 
 		}
@@ -22,7 +22,7 @@
 			btn.setAttribute('onclick','openmenu()');
 			sidemenu.style.marginLeft = '-200px';
 			logo.className = "fas fa-bars";
-			data.style.width = '';
+			data.style.width = '80%';
 		}
 		function opensubmenu1() {
 			submenu1.setAttribute('onclick','closesubmenu1()');
