@@ -36,7 +36,7 @@
 							<label>Username</label>	
 							<!-- <i class="fas fa-user"></i> -->
 
-							<input class="input-text" type="text" name="username" placeholder="" style="border-bottom: 3px solid aqua">
+							<input class="input-text" type="text" name="username" placeholder="">
 							
 								
 							
@@ -45,8 +45,7 @@
 							<input class="input-text" type="password" name="password" placeholder="" class="checkbox" 
 							>
 							
-							<input type="checkbox" class="checkbox" name="" ><label class="label">Setuju untuk ingat password</label>
-
+							
 							<input class="btn-login" type="submit" name="submit" value="Login">
 						</form>
 					</div>	
