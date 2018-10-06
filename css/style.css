@@ -1,6 +1,7 @@
 body{
 	margin: 0;
 	padding: 0;
+	font-family: arial;
 }
 .wrapper{
 	width: 100%;
@@ -10,28 +11,29 @@ body{
 .container-login{
 	width: 100%;
 	height: 100vh;
-	background: linear-gradient(45deg,#67b26f,#4ca2cd);
+	/*background: linear-gradient(45deg,#67b26f,#4ca2cd);*/
+	background: url(../images/bg.png);
+	background-repeat: no-repeat;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-end;
 }
 .form-login{
-	width: 60%;
+	width: 40%;
 	height: 70vh;
-	background-color: white;
-	border-radius: 15px;
+	background-color: transparent;
+	margin-right: 130px;
 	display: flex;
 }
 .content-login{
-	width: 50%;
-	padding-left: 3%;
-	padding-right: 3%;	
+	width: 100%;
 }
 .content-login h2{
 	text-align: center;
-	margin-top: 27%;
 	color: #545454;
 	font-family: arial;
+	font-weight: 300;
+	font-size: 3rem;
 }
 .content-login p{
 	text-align: center;
@@ -41,33 +43,52 @@ body{
 
 }
 .content-login label{
-	padding-left: 6px;
-	position: relative;
-	top: 10px;
 	font-size: 0.9em;
-}
-.content-login img{
-	width: 100%;
-	height: 219px;
-	margin: 30% auto;
-	display: block;
+	color: #999;
 }
 .input-text{
-	width: 70%;
-	padding: 15px 10px 15px 10px;
+	width: 100%;
+	padding: 15px 10px 15px 0px;
 	border: none;
-	border-bottom: 2px solid #d2f2de;
-	color: #9ba09d;
+	border-bottom: 2px solid #eaeaea;
+	color: aqua;
+	font-size: 1rem;
+	margin-bottom: 10px;
 }
+
+.label{
+	font-size: 0.8em;
+	color: #999;
+	margin-top: 1px;
+	float: left;
+}
+
+.checkbox{
+	float: left;
+	cursor: pointer;
+}
+
+.fa-check{
+	padding: 5px !important;
+	text-align: center;
+	background-color: aqua;
+	border-radius: 50%;
+	color: #fff !important;
+	font-size: .7rem !important;
+	justify-content: flex-end;
+	float: right;
+	margin-top: -50px;
+}
+
 .btn-login{
-	width: 100px;
+	width: 400px;
 	height: 40px;
 	border-radius: 50px;
 	border: none;
-	background-color: #5ee090;
+	background-color: aqua;
 	color: white;
 	display: block;
-	margin: 20px auto;
+	margin-top: 50px;
 	cursor: pointer;
 	font-size: 1em;
 	transition: 0.5s ease-in;
@@ -139,4 +160,106 @@ body{
 		margin: auto;
 	}
 
+}
+
+.icon1,.icon2,.icon3,.icon4,.icon5,.icon6{
+	position: absolute;
+	align-items: center;
+}
+
+.icon1{
+	top: 20%;
+	left: 62%;
+	opacity: 0;
+	animation: .8s icon1 ease-in forwards;
+}
+
+.icon2{
+	top: 25%;
+	right: 20.8%;
+	opacity: 0;
+	animation: .8s icon2 ease-in forwards;
+}
+.icon3{
+	bottom: 15%;
+	right: 8%;
+	opacity: 0;
+	animation: .8s 2s icon ease-in forwards;
+}
+
+.icon4{
+	top: 53%;
+	right: 55%;
+	opacity: 0;
+	animation: .8s 1.8s icon4 ease-in forwards;
+}
+
+.icon5{
+	bottom: 5%;
+	right: 0%;
+	opacity: 0;
+	animation: .8s 1.4s icon5 ease-in forwards;
+}
+
+.icon6{
+	top: 0%;
+	right: 0%;
+	opacity: 0;
+	animation: .8s 1s icon ease-in forwards;
+}
+
+@keyframes icon1{
+	from{
+		top: 22%;
+		left: 65%;
+		opacity: 0;
+	}
+	to{
+		top: 20%;
+		left: 62%;
+		opacity: 1;
+	}
+}
+
+@keyframes icon2{
+	from{
+		top: 23%;
+		right: 23.8%;
+		opacity: 0;
+	}
+	to{
+		top: 25%;
+		right: 20.8%;
+		opacity: 1;
+	}
+}
+
+@keyframes icon4{
+	from{
+		transform: scale(0);
+	}
+	to{
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes icon5{
+	from{
+		
+		opacity: 0;
+	}
+	to{
+		right: 0%;
+		opacity: 1;
+	}
+}
+
+@keyframes icon{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
 }

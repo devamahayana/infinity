@@ -21,23 +21,32 @@
 	<div class="wrapper">
 		<div class="container-login">
 			<div class="form-login">
-				<div class="content-login">
-					<img src="images/images2.jpg">
-				</div>
+				
 				<div id="order" class="content-login">
-					<h2>Hi guys !</h2>
-					<p>Login dahulu untuk menggunakan website ini
-					</p>
+					<h2>LOGIN</h2>
+					<img src="images/1.png" width="40px" class="icon1">
+					<img src="images/3.png" width="40px" class="icon2">
+					<img src="images/4.png" width="70px" class="icon3">
+					<img src="images/5.png" width="50px" class="icon4">
+					<img src="images/6.png" width="30px" class="icon5">
+					<img src="images/7.png" width="30px" class="icon6">
 					<div class="login">
 						<form action="index.php" method="post">
-							<br>	
-							<i class="fas fa-user"></i>
-							<input class="input-text" type="text" name="username" placeholder="Username">
-							<br>	
-							<br>	
-							<i class="fas fa-lock"></i>
-							<input class="input-text" type="password" name="password" placeholder="Password"
+							<br>
+							<label>Username</label>	
+							<!-- <i class="fas fa-user"></i> -->
+
+							<input class="input-text" type="text" name="username" placeholder="" style="border-bottom: 3px solid aqua"><i class="fas fa-check"></i>
+							
+								
+							
+							<label>Password</label>		
+							<!-- <i class="fas fa-lock"></i> -->
+							<input class="input-text" type="password" name="password" placeholder="" class="checkbox" 
 							>
+							
+							<input type="checkbox" class="checkbox" name="" ><label class="label">Setuju untuk ingat password</label>
+
 							<input class="btn-login" type="submit" name="submit" value="Login">
 						</form>
 					</div>	
