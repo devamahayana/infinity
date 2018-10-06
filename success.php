@@ -9,6 +9,7 @@
 		<div class="success">
 			<img src="images/success.gif">
 			<p>Success</p>
+			<a href="">OK</a>
 		</div>
 	</div>
 </body>

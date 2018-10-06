@@ -29,6 +29,24 @@
 	animation: .7s animate ease-in forwards;
 	opacity: 0;
 	margin-top: -130px;
+	margin-bottom: 5px;
+}
+
+.success a{
+	text-decoration: none;
+	text-align: center;
+	margin: 0 auto;
+	font-family: arial;
+	font-size: 1.2rem;
+	width: 100px;
+	height: 20px;
+	background-color: #fff;
+	padding: 8px 15px;
+	color: #33cdbb;
+	border-radius: 10px;
+	margin-left: 170px;
+	animation: .7s te ease-in forwards;
+	opacity: 0;
 }
 
 @keyframes animate{
@@ -38,6 +56,17 @@
 	}
 	to{
 		margin-top: -100px;
+		opacity: 1;
+	}
+}
+
+@keyframes te{
+	form{
+		
+		opacity: 0;
+	}
+	to{
+		
 		opacity: 1;
 	}
 }

@@ -14,7 +14,7 @@
 
 .error{
 	width: 400px;
-	height: 300px;
+	height: 350px;
 	background-color: #fff;
 	margin: auto;
 	align-items: center;
@@ -30,6 +30,7 @@
 	animation: .7s animate ease-in forwards;
 	opacity: 0;
 	margin-top: 50px;
+	margin-bottom: 10px;
 }
 
 .error img{
@@ -61,6 +62,23 @@
 	margin-top: -10px;
 }
 
+.error a{
+	text-decoration: none;
+	text-align: center;
+	margin: 0 auto;
+	font-family: arial;
+	font-size: 1.2rem;
+	width: 100px;
+	height: 20px;
+	background-color: #ff7c81;
+	padding: 8px 15px;
+	color: #fff;
+	border-radius: 10px;
+	margin-left: 170px;
+	animation: .7s te ease-in forwards;
+	opacity: 0;
+}
+
 @keyframes animate{
 	form{
 		margin-top: 70px;
@@ -90,6 +108,17 @@
 	}
 	to{
 		margin-top: -10px;
+		opacity: 1;
+	}
+}
+
+@keyframes te{
+	form{
+		
+		opacity: 0;
+	}
+	to{
+		
 		opacity: 1;
 	}
 }

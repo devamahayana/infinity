@@ -16,6 +16,7 @@
 			<div class="garis-kiri"></div>
 			<div class="garis-kanan"></div>
 			<p>Error</p>
+			<a href="">OK</a>
 		</div>
 	</div>
 </body>
