@@ -25,8 +25,17 @@
 <body>
 	<div class="wrapper">
 		<div class="container-sidemenu">
-			<div class="img"></div>
-			<p style="text-align: center;"><a class="profil" href="#">Admin</a></p>
+			<div class="section-atas">
+				<h2>E-<b>School</b></h2>
+				<i class="fas fa-home"></i>
+				<i class="fas fa-envelope"></i>
+			</div>
+			<div class="img">
+				<img src="" width="100%" >
+			</div>
+			<p style="text-align: center;">Selamat Datang</p>
+			<p style="text-align: center; margin-top: -20px !important;"><a class="profil" href="#">Deva Mahayana</a></p>
+			<p>Admin</p>
 			<nav>
 				<ul>
 					<li><a class="urlmenu" href="admin.php">Dashboard</a></li>

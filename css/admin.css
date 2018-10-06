@@ -1,6 +1,7 @@
 body{
 	margin: 0;
 	padding: 0;
+	font-family: arial;
 }
 .wrapper{
 	width: 100%;
@@ -11,26 +12,55 @@ body{
 	position: fixed;
 	width: 20%;
 	height: 100vh;
-	background: linear-gradient(45deg,#67b26f,#4ca2cd);
+	background: #fff;
 	transition: 1s;
-	margin-left: -200px;
+	margin-left: 0px;
+	z-index: 1;
+	box-shadow: 0px 2px 4px rgba(0,0,0,.5);
 }
+
+.section-atas{
+	box-shadow: 0px 1px 2px rgba(0,0,0,.5);
+	height: 60px;	
+}
+
+.section-atas h2{
+	float: left;
+	margin-right: 60px;
+	font-weight: 300;
+	margin-left: 20px;
+}
+
+.section-atas i{
+	float: left;
+	margin-top: 25px;
+	margin-left: 20px;
+
+}
+
 .img{
-	width: 125px;
-	height: 125px;
-	background-color: white;
-	margin: 70px auto 30px auto;
-	border-radius: 100px;
+	width: 100px;
+	height: 100px;
+	margin: 20px auto 0px auto;
+	border-radius: 50%;
+	background: url(../images/profil.jpg);
+	background-position: center;
+	background-size: cover;
+	border: 2px solid #fff;
+	box-shadow: 0px 2px 4px rgba(0,0,0,.5);
 }
 .profil{
-	color: white;
+	color: #000;
 	font-family: arial;
 	text-decoration: none;
 	font-size: 1.5em;
 	text-align: center;
 }
-.comtainer-sidemenu p{
+.container-sidemenu p{
 	text-align: center;
+	font-size: .9rem;
+	color: #555;
+	margin-top: 15px;
 }
 .container-sidemenu nav{
 	margin-top: 30px;
@@ -45,7 +75,7 @@ body{
 .container-sidemenu nav ul li a{
 	display: inline-block;
 	text-decoration: none;
-	color: white;
+	color: #000;
 	font-family: arial;
 	width: 80%;
 	height: 35px;
@@ -73,16 +103,23 @@ body{
 	transition: 1s;
 	width: 100%;
 	height: 40px;
+	float: right;
+	align-content: flex-end;
 	background: linear-gradient(-45deg,#67b26f,#4ca2cd);
 }
 .container-menu button{
 	background-color: rgba(0,0,0,0);
 	border: none;
 	font-size: 1.5em;
-	padding-top: 5px;
-	padding-left: 15px;
 	color: white;
 	cursor: pointer;
+	margin-left: 245px;
+	background-color: #000;
+	border-radius: 50%;
+	text-align: center;
+	padding: 10px 15px;
+	z-index: 100;
+	margin-top: 80px;
 }
 .container-menu nav{
 	float: right;
@@ -116,6 +153,7 @@ body{
 	font-family: arial;
 	color: #333;
 	transition: 1s;
+	margin-left: 300px;
 }
 .judul{
 	display: flex;
