@@ -15,7 +15,7 @@
 			<img src="images/error.gif">
 			<div class="garis-kiri"></div>
 			<div class="garis-kanan"></div>
-			<p>User atau Password tidak ada</p>
+			<p>Data tidak boleh kosong</p>
 			<a href="index.php">OK</a>
 		</div>
 	</div>

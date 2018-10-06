@@ -36,7 +36,7 @@
 							<label>Username</label>	
 							<!-- <i class="fas fa-user"></i> -->
 
-							<input class="input-text" type="text" name="username" placeholder="" style="border-bottom: 3px solid aqua"><i class="fas fa-check"></i>
+							<input class="input-text" type="text" name="username" placeholder="" style="border-bottom: 3px solid aqua">
 							
 								
 							
@@ -76,36 +76,35 @@
 					$_SESSION['username'] = $data['username'];
 					echo "
 						<script>
-							alert('Admin berhasil Login');
-							location.href = 'admin.php';
+							location.href = 'success.php';
 						</script>
 					";
 				}elseif ($data['level'] == "Guru") {
 					$_SESSION['username'] = $data['username'];
 					echo "
 						<script>
-							alert('Guru berhasil Login');
+							location.href = 'success.php';
 						</script>
 					";
 				}elseif ($data['level'] == "Siswa") {
 					$_SESSION['username'] = $data['username'];
 					echo "
 						<script>
-							alert('Siswa berhasil Login');
+							location.href = 'success.php';
 						</script>
 					";
 				}
 			}else{
 				echo "
 					<script>
-						alert('Username atau Password tidak ada!');
+						location.href = 'error.php';
 					</script>
 				";
 			}
 		}else{
 			echo "
 				<script>
-					alert('Data tidak boleh kosong');
+					location.href = 'error1.php';
 				</script>
 			";
 		}

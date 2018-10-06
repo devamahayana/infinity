@@ -9,7 +9,7 @@
 		<div class="success">
 			<img src="images/success.gif">
 			<p>Success</p>
-			<a href="">OK</a>
+			<a href="admin.php">OK</a>
 		</div>
 	</div>
 </body>
