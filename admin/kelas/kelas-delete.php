@@ -1,5 +1,5 @@
 <?php 
-
+	
 	require_once 'core/init.php';
 	$kode_kelas = $_GET['kode_kelas'];
 	

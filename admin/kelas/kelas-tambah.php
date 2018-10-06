@@ -1,7 +1,8 @@
 <?php 
+	require_once 'core/init.php';
 	require_once '../../view/header.php';
  ?>
- 		<script type='text/javascript' src='../../javascript/urlmenu.js'></script>
+ 		<!-- <script type='text/javascript' src='../../javascript/urlmenu.js'></script> -->
  		<div class="container-data">
 			<div class="wrap-data">
 				<div class="judul">
