@@ -7,7 +7,7 @@
  		<div class="container-data">
 			<div class="wrap-data">
 				<div class="judul">
-					<h2>Data user </h2>
+					<h2>Data User Admin</h2>
 					<p id="tanggal"></p>
 				</div>
 				

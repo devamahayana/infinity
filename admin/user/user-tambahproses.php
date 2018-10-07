@@ -5,7 +5,8 @@
 
  		$username = $_POST['username'] ;
  		$password = $_POST['password'] ;
- 		$level = $_POST['level'] ;
+ 		/*$level = $_POST['level'] ;*/
+ 		$level = "Admin";
 
  		
  		if (trim($username) && trim($password) && trim($level)) {
@@ -30,7 +31,7 @@
 			 				</script>
 			 			";
  					}
- 				}elseif ($level == "Guru") {
+ 				}/*elseif ($level == "Guru") {
  					if ($hasil_user = mysqli_query($link , $query_tambahuser) && guru($username , $level)){ 
 		 				echo "
 			 				<script>
@@ -64,7 +65,7 @@
 			 			";
 		 			}
  					
- 				}
+ 				}*/
  			}else{
  				echo "
 	 				<script>

@@ -4,7 +4,7 @@
 	function viewdata(){
 		GLOBAL $link;
 
-		$query  = "SELECT * FROM tb_login ORDER BY kode_login";
+		$query  = "SELECT * FROM tb_login WHERE level = 'Admin' ORDER BY kode_login";
 		$hasil = mysqli_query($link , $query);
 		if (mysqli_num_rows($hasil) > 0) {
 			$i = 0;

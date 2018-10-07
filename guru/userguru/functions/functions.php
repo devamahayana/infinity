@@ -22,9 +22,9 @@
 						<td>".$data['alamat_guru']."</td>
 						<td>".$data['jk_guru']."</td>
 						<td>".$data['notelp_guru']."</td>
-						<td>".$data['email_guru']."</td>
 						<td>
-							<a class='btn-edit' href='guru-edit.php?kode_guru=".$data['kode_guru']."'>Edit</a>
+							<a class='btn-edit' href='guru-edit.php?kode_guru=".$data['kode_guru']."&kode_login=".$data['kode_login']."'>Edit</a>
+							<a class='btn-delete' href='guru-delete.php?kode_guru=".$data['kode_guru']."&kode_login=".$data['kode_login']."'>Delete</a>
 						</td>
 					</tr>
 

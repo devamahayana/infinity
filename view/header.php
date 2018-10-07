@@ -44,14 +44,14 @@
 					<li><a class="urlmenu" href="../../admin/dashboard/admin.php"><i class="fas fa-tachometer-alt"></i>&nbsp;Dashboard</a></li>
 					<li><a id="submenu1" onclick="opensubmenu1()"><i class="fas fa-users"></i>&nbsp;Admin</a>
 						<ul id="list1" class="closesub">
-							<li><a class="urlmenu" href="../../admin/user/index.php"><i class="fas fa-user"></i>&nbsp;User</a></li>
+							<li><a class="urlmenu" href="../../admin/user/index.php"><i class="fas fa-user"></i>&nbsp;User Admin</a></li>
 							<li><a class="urlmenu" href="../../admin/matpel/index.php"><i class="fas fa-book"></i>&nbsp;Mata Pelajaran</a></li>
 							<li><a class="urlmenu" href="../../admin/kelas/index.php"><i class="fas fa-copy"></i>&nbsp;Kelas</a></li>
 						</ul>
 					</li>
 					<li><a id="submenu2" onclick="opensubmenu2()"><i class="fas fa-chalkboard-teacher"></i>&nbsp;Guru</a>
 						<ul id="list2" class="closesub">
-							<li><a class="urlmenu" href="../../guru/semuaguru/index.php">Semua Guru</a></li>
+							<li><a class="urlmenu" href="../../guru/userguru/index.php">User Guru</a></li>
 						</ul>
 					</li>
 					<li><a id="submenu3" onclick="opensubmenu3()"><i class="fas fa-user"></i>&nbsp;Siswa</a>
