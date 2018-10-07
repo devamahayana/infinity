@@ -1,8 +1,7 @@
 <?php 
+	require_once 'core/init.php';
 	require_once '../../view/header.php';
  ?>
-
- 		<script type='text/javascript' src='../../javascript/urlmenu.js'></script>
  		<div class="container-data">
 			<div class="wrap-data">
 				<div class="judul">
@@ -16,8 +15,8 @@
 					<table cellpadding="10px"> 
 						<tr class="judul-form">
 							<th width="50px">No</th>
-							<th>Username</th>
-							<th>Level</th>
+							<th>Nama Mata Pelajaran</th>
+							<th>Jam</th>
 							<th width="150px">Option</th>
 						</tr>
 						<?php viewdata(); ?>

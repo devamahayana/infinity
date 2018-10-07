@@ -1,11 +1,11 @@
 <?php 
+	require_once 'core/init.php';
 	require_once '../../view/header.php';
  ?>
- 		<script type='text/javascript' src='../../javascript/urlmenu.js'></script>
  		<div class="container-data">
 			<div class="wrap-data">
 				<div class="judul">
-					<h2>Semua Guru</h2>
+					<h2>User Guru</h2>
 					<p id="tanggal"></p>
 				</div>
 				<div class="search">
@@ -21,12 +21,13 @@
 							<th>Alamat</th>
 							<th>Jenis Kelamin</th>
 							<th>Telp</th>
-							<th>Email</th>
 							<th width="150px"> Option</th>
 						</tr>
 						<?php viewdata(); ?>
 						<tr class="bawah-form" style="background-color: #67b26f; ">
-							<td colspan="11"></td>
+							<td colspan="11">
+								<a class="btn-tambah" href="guru-tambah.php">Tambah</a>
+							</td>
 						</tr>
 					</table>
 				</div>

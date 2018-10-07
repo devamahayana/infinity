@@ -1,12 +1,13 @@
 <?php 
+	require_once 'core/init.php';
 	require_once '../../view/header.php';
  ?>
 
- 		<script type='text/javascript' src='../../javascript/urlmenu.js'></script>
+ 		<!-- <script type='text/javascript' src='../../javascript/urlmenu.js'></script> -->
  		<div class="container-data">
 			<div class="wrap-data">
 				<div class="judul">
-					<h2>Data user </h2>
+					<h2>Data User Admin</h2>
 					<p id="tanggal"></p>
 				</div>
 				

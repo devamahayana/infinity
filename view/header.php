@@ -1,9 +1,9 @@
 <?php 
-	require_once 'core/init.php';
+	
 	if (!isset($_SESSION['username'])) {
 		echo "<script>
 		alert('anda belum login !');
-			location.href = 'index.php';
+			location.href = '../../index.php';
 
 		</script>";
 	}
@@ -15,11 +15,11 @@
 <html>
 <head>
 	<title>Sekolahku </title>
-	<link rel="stylesheet" type="text/css" href="css/admin.css?v=2.0">
-	<link rel="stylesheet" type="text/css" href="fontawesome/css/fontawesome.min.css">
-	<link rel="stylesheet" type="text/css" href="fontawesome/css/solid.css">
-	<link rel="stylesheet" type="text/css" href="fontawesome/css/regular.css">
-	<link rel="stylesheet" type="text/css" href="fontawesome/css/brands.css">
+	<link rel="stylesheet" type="text/css" href="../../css/admin.css?v=2.0">
+	<link rel="stylesheet" type="text/css" href="../../fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../fontawesome/css/solid.css">
+	<link rel="stylesheet" type="text/css" href="../../fontawesome/css/regular.css">
+	<link rel="stylesheet" type="text/css" href="../../fontawesome/css/brands.css">
 	<meta name="viewport" content="width-device-width, initial-scale=1">
 </head>
 <body>
@@ -41,22 +41,22 @@
 			<p style="text-align: center; margin-top: -15px !important;">Admin</p>
 			<nav>
 				<ul>
-					<li><a class="urlmenu" href="admin.php"><i class="fas fa-tachometer-alt"></i>&nbsp;Dashboard</a></li>
+					<li><a class="urlmenu" href="../../admin/dashboard/admin.php"><i class="fas fa-tachometer-alt"></i>&nbsp;Dashboard</a></li>
 					<li><a id="submenu1" onclick="opensubmenu1()"><i class="fas fa-users"></i>&nbsp;Admin</a>
 						<ul id="list1" class="closesub">
-							<li><a class="urlmenu" href="admin/user/index.php"><i class="fas fa-user"></i>&nbsp;User</a></li>
-							<li><a class="urlmenu" href="admin/matpel/index.php"><i class="fas fa-book"></i>&nbsp;Mata Pelajaran</a></li>
-							<li><a class="urlmenu" href="admin/kelas/index.php"><i class="fas fa-copy"></i>&nbsp;Kelas</a></li>
+							<li><a class="urlmenu" href="../../admin/user/index.php"><i class="fas fa-user"></i>&nbsp;User Admin</a></li>
+							<li><a class="urlmenu" href="../../admin/matpel/index.php"><i class="fas fa-book"></i>&nbsp;Mata Pelajaran</a></li>
+							<li><a class="urlmenu" href="../../admin/kelas/index.php"><i class="fas fa-copy"></i>&nbsp;Kelas</a></li>
 						</ul>
 					</li>
 					<li><a id="submenu2" onclick="opensubmenu2()"><i class="fas fa-chalkboard-teacher"></i>&nbsp;Guru</a>
 						<ul id="list2" class="closesub">
-							<li><a class="urlmenu" href="guru/semuaguru/index.php">Semua Guru</a></li>
+							<li><a class="urlmenu" href="../../guru/userguru/index.php">User Guru</a></li>
 						</ul>
 					</li>
 					<li><a id="submenu3" onclick="opensubmenu3()"><i class="fas fa-user"></i>&nbsp;Siswa</a>
 						<ul id="list3" class="closesub">
-							<li><a class="urlmenu" href="siswa/semuasiswa/index.php">Semua siswa</a></li>
+							<li><a class="urlmenu" href="../../siswa/semuasiswa/index.php">Semua siswa</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -71,9 +71,9 @@
 			<div class="section-kanan">
 				<p>Deva <b>Mahayana</b></p>
 				<i class="fas fa-caret-down"></i>
-				<img src="images/profil.jpg" width="40px">
+				<img src="../../images/profil.jpg" width="40px">
 				<i class="fas fa-cog"></i>
-				<a class="logout" href="logout.php"><i class="fas fa-sign-out-alt"></i></a>
+				<a class="logout" href="../../logout.php"><i class="fas fa-sign-out-alt"></i></a>
 			</div>
 
 			<!-- <nav>

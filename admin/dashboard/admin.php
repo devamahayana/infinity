@@ -1,8 +1,12 @@
-	<?php require_once 'view/header.php'; ?>
+	
+	<?php 
+			session_start();
+			require_once '../../view/header.php'; 
+	?>
 		<div class="container-data">
 			<div class="wrap-data">
 				<div class="judul">
-					<h2>Dashboard</h2>
+					<h2>Dashboard Admin</h2>
 					<p id="tanggal"></p>
 				</div>
 				
@@ -39,5 +43,5 @@
 				</div> -->
 			</div>
 		</div>
-	<?php require_once 'view/footer.php'; ?>
-	<script type="text/javascript" src="javascript/layout.js"></script>
+	<?php require_once '../../view/footer.php'; ?>
+	<script type="text/javascript" src="../../javascript/layout.js"></script>

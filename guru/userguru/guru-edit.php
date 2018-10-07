@@ -1,7 +1,7 @@
 <?php 
+	require_once 'core/init.php';
 	require_once '../../view/header.php';
  ?>
- 		<script type='text/javascript' src='../../javascript/urlmenu.js'></script>
  		<?php 
  			$kode_guru = $_GET['kode_guru'];
 

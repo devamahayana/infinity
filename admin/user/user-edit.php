@@ -1,7 +1,8 @@
 <?php 
+	require_once 'core/init.php';
 	require_once '../../view/header.php';
  ?>
- 		<script type='text/javascript' src='../../javascript/urlmenu.js'></script>
+ 		<!-- <script type='text/javascript' src='../../javascript/urlmenu.js'></script> -->
  		<?php 
  			$kode_login = $_GET['kode_login'];
 
@@ -13,7 +14,7 @@
  		<div class="container-data">
 			<div class="wrap-data">
 				<div class="judul">
-					<h2>Edit akun user</h2>
+					<h2>Edit User Admin</h2>
 					<p id="tanggal"></p>
 				</div>
 				<div class="form">
@@ -32,7 +33,7 @@
 									<input style="width: 50%;" class="input-text" type="password" name="password" value="<?php echo $data['password'];?>">
 								</td>
 							</tr>
-							<tr>
+							<!-- <tr>
 								<td>
 									<label class="label">Level</label><br>
 									<select class="input-select" name="level">
@@ -43,7 +44,7 @@
 										<option value="Siswa">Siswa</option>
 									</select>
 								</td>
-							</tr>
+							</tr> -->
 							<tr>
 								<td colspan="2"> 
 									<input style="border: none;" class="btn-edit tombol-edit" type="submit" name="submit" value="Edit">

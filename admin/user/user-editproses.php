@@ -5,15 +5,14 @@
  		$kode_login = $_POST['kode_login'];
  		$username = $_POST['username'] ;
  		$password = $_POST['password'] ;
- 		$level = $_POST['level'] ;
 
  		
- 		if (trim($username) && trim($password) && trim($level)) {
- 			$query = " UPDATE tb_login SET username = '$username' , password = '$password' , level = '$level' WHERE kode_login =".$kode_login;
+ 		if (trim($username) && trim($password) ) {
+ 			$query = " UPDATE tb_login SET username = '$username' , password = '$password' WHERE kode_login =".$kode_login;
 	 		if ($hasil = mysqli_query($link , $query) ){
 	 			echo "
 	 				<script>
-		 				alert('Data berhasil ditambahkan !');
+		 				alert('Data berhasil diedit !');
 		 				location.href = 'index.php';
 		 			</script>
 				";
