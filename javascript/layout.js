@@ -16,6 +16,8 @@
 			sidemenu.style.marginLeft = '0px';
 			logo.className = "fas fa-angle-left";
 			data.style.width = '70%';
+			document.getElementsByClassName('section-kiri')[0].style.transition = '1s';
+			document.getElementsByClassName('section-kiri')[0].style.marginLeft = '300px';
 
 		}
 		function closemenu() {
@@ -23,6 +25,8 @@
 			sidemenu.style.marginLeft = '-200px';
 			logo.className = "fas fa-bars";
 			data.style.width = '80%';
+			document.getElementsByClassName('section-kiri')[0].style.transition = '1s';
+			document.getElementsByClassName('section-kiri')[0].style.marginLeft = '100px';
 		}
 		function opensubmenu1() {
 			submenu1.setAttribute('onclick','closesubmenu1()');

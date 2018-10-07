@@ -64,6 +64,7 @@
 						<ul id="list1" class="closesub">
 							<li><a class="urlmenu" href="../../admin/user/index.php"><i class="fas fa-user"></i>&nbsp;User Admin</a></li>
 							<li><a class="urlmenu" href="../../admin/matpel/index.php"><i class="fas fa-book"></i>&nbsp;Mata Pelajaran</a></li>
+							<li><a class="urlmenu" href="../../admin/jadwal/index.php"><i class="fas fa-book"></i>&nbsp;Jadwal Pelajaran</a></li>
 							<li><a class="urlmenu" href="../../admin/kelas/index.php"><i class="fas fa-copy"></i>&nbsp;Kelas</a></li>
 						</ul>
 					</li>
