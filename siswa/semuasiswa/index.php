@@ -27,7 +27,9 @@
 						</tr>
 						<?php viewdata(); ?>
 						<tr class="bawah-form" style="background-color: #67b26f; ">
-							<td colspan="11"></td>
+							<td colspan="11">
+								<a class="btn-tambah" href="siswa-tambah.php">Tambah</a>
+							</td>
 						</tr>
 					</table>
 				</div>

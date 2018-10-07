@@ -7,7 +7,7 @@
 		<div class="container-data">
 			<div class="wrap-data">
 				<div class="judul">
-					<h2>Dashboard Admin</h2>
+					<h2>Dashboard Siswa</h2>
 					<p id="tanggal"></p>
 				</div>
 				

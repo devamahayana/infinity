@@ -25,7 +25,8 @@
 						<td>".$data['nama_ayah']."</td>
 						<td>".$data['notelp_ortu']."</td>
 						<td>
-							<a class='btn-edit' href='siswa-edit.php?kode_siswa=".$data['kode_siswa']."'>Edit</a>
+							<a class='btn-edit' href='siswa-edit.php?kode_siswa=".$data['kode_siswa']."&kode_login=".$data['kode_login']."'>Edit</a>
+							<a class='btn-delete' href='siswa-delete.php?kode_siswa=".$data['kode_siswa']."&kode_login=".$data['kode_login']."'>Delete</a>
 						</td>
 					</tr>
 

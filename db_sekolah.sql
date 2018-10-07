@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 05 Okt 2018 pada 19.17
+-- Waktu pembuatan: 07 Okt 2018 pada 18.52
 -- Versi server: 10.1.34-MariaDB
 -- Versi PHP: 5.6.37
 
@@ -48,8 +48,8 @@ CREATE TABLE `tb_guru` (
 --
 
 INSERT INTO `tb_guru` (`kode_guru`, `kode_login`, `nik`, `nama_guru`, `alamat_guru`, `jk_guru`, `tempatlahir_guru`, `tgllahir_guru`, `agama_guru`, `notelp_guru`, `email_guru`, `foto_guru`) VALUES
-(5, 35, 'Belum diisi', 'Belum diisi', 'Belum diisi', 'Belum diisi', 'Belum diisi', 'Belum diisi', 'Belum diisi', 'Belum diisi', 'Belum Diisi', 'Belum Diisi'),
-(6, 36, 'Belum diisi', 'Belum diisi', 'Belum diisi', 'Belum diisi', 'Belum diisi', 'Belum diisi', 'Belum diisi', 'Belum diisi', 'Belum Diisi', 'Belum Diisi');
+(7, 1538869924, '1234', 'I Gede Yoga Permana Putra', 'Jln Kertapura Gg. Segina IIIB No.26x', 'Lak-laki', 'Denpasar', '22 Juli 2001', 'Hindu', '081236540148', 'permana0912@gmail.com', ''),
+(8, 1538870738, '1235', 'Made Deva Mahayana', 'Jln Kenyeri No. 25z', 'Lak-laki', 'Denpasar', '13 Agustus 2001', 'Hindu', '081236540148', 'deva@yahoo.com', '');
 
 -- --------------------------------------------------------
 
@@ -63,6 +63,13 @@ CREATE TABLE `tb_kelas` (
   `tingkat_kelas` varchar(25) NOT NULL,
   `ruangan_kelas` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `tb_kelas`
+--
+
+INSERT INTO `tb_kelas` (`kode_kelas`, `nama_kelas`, `tingkat_kelas`, `ruangan_kelas`) VALUES
+(1, 'RPL 3', 'XI', '3');
 
 -- --------------------------------------------------------
 
@@ -83,9 +90,9 @@ CREATE TABLE `tb_login` (
 
 INSERT INTO `tb_login` (`kode_login`, `username`, `password`, `level`) VALUES
 (1, 'admin', '123', 'Admin'),
-(34, 'siswa_yoga', '123', 'Siswa'),
-(35, 'guru_yoga', '123', 'Guru'),
-(36, 'test', '123', 'Guru');
+(1538869924, 'yoga', '123', 'Guru'),
+(1538870738, 'Deva', '123', 'Guru'),
+(1538927873, '16bagusyudhistira', '1234', 'Siswa');
 
 -- --------------------------------------------------------
 
@@ -133,7 +140,7 @@ CREATE TABLE `tb_siswa` (
 --
 
 INSERT INTO `tb_siswa` (`kode_siswa`, `kode_login`, `nis`, `nama_siswa`, `agama_siswa`, `alamat_siswa`, `jk_siswa`, `kelas_siswa`, `tempatlahir_siswa`, `tgllahir_siswa`, `nama_ayah`, `notelp_ortu`, `img_siswa`) VALUES
-(3, 34, 'Belum diis', 'Belum diisi', 'Belum diisi', 'Belum diisi', 'Belum diis', 'Belum diis', 'Belum diisi', 'Belum diisi', 'Belum diisi', 'Belum diisi', 'Belum diisi');
+(4, 1538927873, '1234', 'Ngurah Bagus Yudhistira', 'Budha', 'Jln Kepaon No 25', 'Lak-laki', 'XII RPL 3', 'Denpasar', '15 Agustus 2001', 'Selamet', '082810701921', '');
 
 --
 -- Indexes for dumped tables
@@ -179,7 +186,7 @@ ALTER TABLE `tb_siswa`
 -- AUTO_INCREMENT untuk tabel `tb_guru`
 --
 ALTER TABLE `tb_guru`
-  MODIFY `kode_guru` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `kode_guru` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_kelas`
@@ -191,19 +198,19 @@ ALTER TABLE `tb_kelas`
 -- AUTO_INCREMENT untuk tabel `tb_login`
 --
 ALTER TABLE `tb_login`
-  MODIFY `kode_login` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `kode_login` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1538927874;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_matpel`
 --
 ALTER TABLE `tb_matpel`
-  MODIFY `kode_matpel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `kode_matpel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_siswa`
 --
 ALTER TABLE `tb_siswa`
-  MODIFY `kode_siswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `kode_siswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)

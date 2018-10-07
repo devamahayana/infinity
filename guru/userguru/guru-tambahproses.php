@@ -46,7 +46,7 @@
  				echo "
 	 				<script>
 	 					alert('Username ".$username." sudah ada !');
-	 					location.href = 'user-tambah.php';
+	 					location.href = 'guru-tambah.php';
 	 				</script>
 	 			";
  			}
@@ -54,7 +54,7 @@
  			echo "
  				<script>
  					alert('Data tidak boleh kosong !');
- 					location.href = 'user-tambah.php';
+ 					location.href = 'guru-tambah.php';
  				</script>
  			";
  		}

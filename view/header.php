@@ -7,9 +7,10 @@
 
 		</script>";
 	}
-	/*$username = $_SESSION['username'];
+	$username = $_SESSION['username'];
 	$query = "SELECT * FROM tb_login WHERE username = '$username'";
-	$hasil = */
+	$hasil = mysqli_query($link , $query);
+	$d 	= mysqli_fetch_assoc($hasil);
  ?>
 <!DOCTYPE html>
 <html>
@@ -37,11 +38,28 @@
 				<img src="" width="100%" >
 			</div>
 			<p style="text-align: center;">Selamat Datang</p>
-			<p style="text-align: center; margin-top: -20px !important;"><a class="profil" href="#">Deva Mahayana</a></p>
-			<p style="text-align: center; margin-top: -15px !important;">Admin</p>
+			<p style="text-align: center; margin-top: -20px !important;">
+				<a class="profil" href="#">
+					<?php echo $d['username']; ?>
+				</a>
+			</p>
+			<p style="text-align: center; margin-top: -15px !important;"><?php echo $d['level']; ?></p>
 			<nav>
 				<ul>
-					<li><a class="urlmenu" href="../../admin/dashboard/admin.php"><i class="fas fa-tachometer-alt"></i>&nbsp;Dashboard</a></li>
+					<li>
+						<?php 
+							if ($d['level'] == "Admin") {
+								echo "<a class='urlmenu' href='../../admin/dashboard/admin.php'><i class='fas fa-tachometer-alt'></i>&nbsp;Dashboard</a>";
+							}elseif ($d['level'] == "Guru") {
+								echo "<a class='urlmenu' href='../../guru/dashboard/guru.php'><i class='fas fa-tachometer-alt'></i>&nbsp;Dashboard</a>";
+							}elseif ($d['level'] == "Siswa") {
+								echo "<a class='urlmenu' href='../../siswa/dashboard/siswa.php'><i class='fas fa-tachometer-alt'></i>&nbsp;Dashboard</a>";
+							}
+						 ?>
+					</li>
+					<?php 
+						if ($d['level'] == "Admin") {
+					 ?>
 					<li><a id="submenu1" onclick="opensubmenu1()"><i class="fas fa-users"></i>&nbsp;Admin</a>
 						<ul id="list1" class="closesub">
 							<li><a class="urlmenu" href="../../admin/user/index.php"><i class="fas fa-user"></i>&nbsp;User Admin</a></li>
@@ -49,6 +67,11 @@
 							<li><a class="urlmenu" href="../../admin/kelas/index.php"><i class="fas fa-copy"></i>&nbsp;Kelas</a></li>
 						</ul>
 					</li>
+					<?php 
+						}else{
+							echo "";
+						}
+					 ?>
 					<li><a id="submenu2" onclick="opensubmenu2()"><i class="fas fa-chalkboard-teacher"></i>&nbsp;Guru</a>
 						<ul id="list2" class="closesub">
 							<li><a class="urlmenu" href="../../guru/userguru/index.php">User Guru</a></li>
@@ -69,7 +92,26 @@
 			</div>
 
 			<div class="section-kanan">
-				<p>Deva <b>Mahayana</b></p>
+				<p>
+					<?php 
+						if ($d['level'] == 'Admin') {
+							echo "<b>".$d['username']."</b>";
+						}elseif ($d['level'] == 'Guru') {
+							$kode_login = $d['kode_login'];
+							$showguru = "SELECT * FROM tb_guru WHERE kode_login = $kode_login";
+							$fetch = mysqli_query($link,$showguru);
+							$show = mysqli_fetch_assoc($fetch);
+							echo "<b>".$show['nama_guru']."</b>";
+						}elseif ($d['level'] == 'Siswa') {
+							$kode_login = $d['kode_login'];
+							$showguru = "SELECT * FROM tb_siswa WHERE kode_login = $kode_login";
+							$fetch = mysqli_query($link,$showguru);
+							$show = mysqli_fetch_assoc($fetch);
+							echo "<b>".$show['nama_siswa']."</b>";
+						}
+
+					 ?>
+				</p>
 				<i class="fas fa-caret-down"></i>
 				<img src="../../images/profil.jpg" width="40px">
 				<i class="fas fa-cog"></i>
