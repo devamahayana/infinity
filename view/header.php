@@ -15,6 +15,85 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+	  <style>
+      #loader {
+        transition: all 0.3s ease-in-out;
+        opacity: 1;
+        visibility: visible;
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background: #fff;
+        z-index: 90000;
+      }
+
+      #loader.fadeOut {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .spinner {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: calc(50% - 20px);
+        left: calc(50% - 20px);
+        background-color: #333;
+        border-radius: 100%;
+        -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+        animation: sk-scaleout 1.0s infinite ease-in-out;
+      }
+
+      @-webkit-keyframes sk-scaleout {
+        0% { -webkit-transform: scale(0) }
+        100% {
+          -webkit-transform: scale(1.0);
+          opacity: 0;
+        }
+      }
+
+      @keyframes sk-scaleout {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        } 100% {
+          -webkit-transform: scale(1.0);
+          transform: scale(1.0);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body class="app">
+    <!-- @TOC -->
+    <!-- =================================================== -->
+    <!--
+      + @Page Loader
+      + @App Content
+          - #Left Sidebar
+              > $Sidebar Header
+              > $Sidebar Menu
+
+          - #Main
+              > $Topbar
+              > $App Screen Content
+    -->
+
+    <!-- @Page Loader -->
+    <!-- =================================================== -->
+    <div id='loader'>
+      <div class="spinner"></div>
+    </div>
+
+    <script>
+      window.addEventListener('load', () => {
+        const loader = document.getElementById('loader');
+        setTimeout(() => {
+          loader.classList.add('fadeOut');
+        }, 300);
+      });
+    </script>
 	<title>Sekolahku </title>
 	<link rel="stylesheet" type="text/css" href="../../css/admin.css?v=2.0">
 	<link rel="stylesheet" type="text/css" href="../../fontawesome/css/fontawesome.min.css">
@@ -22,8 +101,7 @@
 	<link rel="stylesheet" type="text/css" href="../../fontawesome/css/regular.css">
 	<link rel="stylesheet" type="text/css" href="../../fontawesome/css/brands.css">
 	<meta name="viewport" content="width-device-width, initial-scale=1">
-</head>
-<body>
+
 	<div class="wrapper">
 		<div class="container-sidemenu">
 			<button id="btn" onclick="closemenu()">
@@ -31,14 +109,12 @@
 			</button>
 			<div class="section-atas">
 				<h2>E-<b>School</b></h2>
-				<i class="fas fa-home"></i>
-				<i class="fas fa-envelope"></i>
 			</div>
 			<div class="img">
 				<img src="" width="100%" >
 			</div>
-			<p style="text-align: center;">Selamat Datang</p>
-			<p style="text-align: center; margin-top: -20px !important;">
+			
+			<p>
 				<a class="profil" href="#">
 					<?php echo $d['username']; ?>
 				</a>
@@ -46,10 +122,13 @@
 			<p style="text-align: center; margin-top: -15px !important;"><?php echo $d['level']; ?></p>
 			<nav>
 				<ul>
+					<li class="title-menu">
+						<i class="fas fa-long-arrow-alt-right"></i>&nbsp;Menu
+					</li>
 					<li>
 						<?php 
 							if ($d['level'] == "Admin") {
-								echo "<a class='urlmenu' href='../../admin/dashboard/admin.php'><i class='fas fa-tachometer-alt'></i>&nbsp;Dashboard</a>";
+								echo "<a class='urlmenu' href='../../admin/dashboard/admin.php'><i class='fas fa-home'></i>&nbsp;Dashboard</a>";
 							}elseif ($d['level'] == "Guru") {
 								echo "<a class='urlmenu' href='../../guru/dashboard/guru.php'><i class='fas fa-tachometer-alt'></i>&nbsp;Dashboard</a>";
 							}elseif ($d['level'] == "Siswa") {
@@ -60,33 +139,44 @@
 					<?php 
 						if ($d['level'] == "Admin") {
 					 ?>
-					<li><a id="submenu1" onclick="opensubmenu1()"><i class="fas fa-users"></i>&nbsp;Admin</a>
+					<!-- <li><a id="submenu1" onclick="opensubmenu1()"><i class="fas fa-users"></i>&nbsp;Akun</a>
 						<ul id="list1" class="closesub">
 							<li><a class="urlmenu" href="../../admin/user/index.php"><i class="fas fa-user"></i>&nbsp;User Admin</a></li>
 							<li><a class="urlmenu" href="../../admin/matpel/index.php"><i class="fas fa-book"></i>&nbsp;Mata Pelajaran</a></li>
 							<li><a class="urlmenu" href="../../admin/kelas/index.php"><i class="fas fa-copy"></i>&nbsp;Kelas</a></li>
 						</ul>
-					</li>
+					</li> -->
 					<?php 
 						}else{
 							echo "";
 						}
 					 ?>
-					<li><a id="submenu2" onclick="opensubmenu2()"><i class="fas fa-chalkboard-teacher"></i>&nbsp;Guru</a>
+					<!--  -->
+
+					<li><a class="urlmenu" href="../../admin/matpel/index.php"><i style="color: red"  class="fas fa-book"></i>&nbsp;Mata Pelajaran</a></li>
+					<li><a class="urlmenu" href="../../admin/kelas/index.php"><i style="color: orange" class="fab fa-cuttlefish"></i>&nbsp;Kelas</a></li>
+					<li class="title-menu">
+						<i class="fas fa-long-arrow-alt-right"></i>&nbsp;Akun
+					</li>
+					<li style="cursor: pointer;"><a id="submenu2" onclick="opensubmenu2()"><i style="color: violet" class="fas fa-users"></i>&nbsp;Akun</a>
 						<ul id="list2" class="closesub">
-							<li><a class="urlmenu" href="../../guru/userguru/index.php">User Guru</a></li>
+							<li><a class="urlmenu" href="../../admin/user/index.php"><i style="color: orange" class="fas fa-user"></i>&nbsp;User Admin</a></li>
+							<li><a class="urlmenu" href="../../guru/userguru/index.php"><i style="color: brown"  class="fas fa-chalkboard-teacher "></i>&nbsp;User Guru</a></li>
+							<li><a class="urlmenu" href="../../siswa/semuasiswa/index.php"><i style="color: red"  class="fas fa-user-graduate "></i>&nbsp;User Siswa</a></li>
 						</ul>
 					</li>
-					<li><a id="submenu3" onclick="opensubmenu3()"><i class="fas fa-user"></i>&nbsp;Siswa</a>
+					<!-- <li><a id="submenu3" onclick="opensubmenu3()"><i class="fas fa-user"></i>&nbsp;Siswa</a>
 						<ul id="list3" class="closesub">
-							<li><a class="urlmenu" href="../../siswa/semuasiswa/index.php">Semua siswa</a></li>
+
 						</ul>
-					</li>
+					</li> -->
 				</ul>
 			</nav>
 		</div>
 		<div class="container-menu">
 			<div class="section-kiri">
+				<i class="fas fa-home"></i>
+				<i class="fas fa-bell"></i>
 				<i class="fas fa-search"></i>
 				<input type="text" name="" placeholder="Cari Data Disini ...">
 			</div>
